@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "temp-product-app",
-    "slug": "temp-product-app",
+    "name": "React-Native-Technical-Practice",
+    "slug": "React-Native-Technical-Practice",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
