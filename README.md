@@ -1,9 +1,3 @@
-<<<<<<< Updated upstream
-# React-Native-Technical-Practice
-React Native – Technical practice
-=======
-# Product Favorites App
-
 An Expo React Native technical test that displays products from
 [Fake Store API](https://fakestoreapi.com/) and lets users save favorites.
 
@@ -138,4 +132,3 @@ The project stays intentionally small and practical:
 React Navigation provides a bottom tab navigator with a native product stack.
 Favorites remain outside screen-local state so they survive navigation, and
 storage writes begin only after saved favorites finish hydrating.
->>>>>>> Stashed changes
