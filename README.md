@@ -1,18 +1,11 @@
+<<<<<<< Updated upstream
+# React-Native-Technical-Practice
+React Native – Technical practice
+=======
 # Product Favorites App
 
-A small Expo React Native application built for a technical assessment. It
-loads products from the [Fake Store API](https://fakestoreapi.com/), provides
-typed product-detail navigation, and lets users save favorites locally.
-
-## Tech Stack
-
-- Expo SDK 54
-- React Native 0.81
-- React 19.1
-- TypeScript
-- React Navigation
-- React Context with `useReducer`
-- AsyncStorage
+An Expo React Native technical test that displays products from
+[Fake Store API](https://fakestoreapi.com/) and lets users save favorites.
 
 ## Requirements
 
@@ -118,9 +111,31 @@ npx expo install --check
 npx expo-doctor
 ```
 
-## Notes
+## Features
 
-- Product data comes from a public external API, so initial loading depends on
-  the API and network availability.
-- Favorites are stored only on the current device using AsyncStorage.
-- No UI framework or external state-management library is used.
+- Product list with loading, error, retry, empty, and pull-to-refresh states
+- Product cards with images, titles, categories, and USD prices
+- Typed navigation to product details
+- Product details with rating information when available
+- Global favorites managed with React Context and `useReducer`
+- Duplicate prevention and removal from favorites
+- Favorites tab with an empty state
+- AsyncStorage persistence with guarded hydration
+- Safe-area handling, accessibility labels, and a small favorite animation
+
+## Architecture
+
+The project stays intentionally small and practical:
+
+- `src/api` contains the product request
+- `src/components` contains reusable UI
+- `src/context` owns global favorites and persistence
+- `src/navigation` contains typed stack and tab navigation
+- `src/screens` contains screen-level state and layout
+- `src/types` contains product types and validation
+- `src/utils` contains shared price formatting
+
+React Navigation provides a bottom tab navigator with a native product stack.
+Favorites remain outside screen-local state so they survive navigation, and
+storage writes begin only after saved favorites finish hydrating.
+>>>>>>> Stashed changes
