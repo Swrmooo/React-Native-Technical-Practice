@@ -3,9 +3,9 @@ An Expo React Native technical test that displays products from
 
 ## Requirements
 
-- Node.js 20.19.4 or newer
+- Node.js 22.13.0 or newer (required by Expo SDK 57)
 - npm
-- Expo Go installed on an iOS or Android device
+- Expo Go compatible with SDK 57 installed on an iOS or Android device
 - An internet connection for loading products
 
 ## Setup and Run
@@ -24,6 +24,18 @@ npm start
 
 Connect the computer and mobile device to the same network, then scan the QR
 code with Expo Go.
+
+After upgrading dependencies, stop the previous development server and clear
+Metro's cache before scanning the new QR code:
+
+```bash
+npm run start:clear
+```
+
+If startup reports `PlatformConstants could not be found`, ensure Expo Go
+supports SDK 57 and that you opened this project's current server. The JavaScript
+dependencies must match the native runtime. For a custom development build,
+rebuild and reinstall the native app after upgrading the SDK.
 
 If the device cannot connect over the local network, try:
 
